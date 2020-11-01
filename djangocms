@@ -1,0 +1,19 @@
+# djangocms
+
+This is some notes.
+
+
+sudo python3 -m pip install virtualenv
+
+mkdir mb && cd mb
+virtualenv env
+source env/bin/activate
+
+pip install djangocms-installer
+
+mkdir mbs && cd mbs
+djangocms -f -p . mb1
+
+cd mb1 && ls
+manage.py [mb1] [media] project.db requirements.txt [static]
+
