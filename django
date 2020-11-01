@@ -1,0 +1,86 @@
+
+# create a folder for venv
+mkdir trydj
+cd trydj
+
+# create local virtual environment
+python -m venv .  
+or 
+python -m venv <relative-path-to-folder>
+
+# show the folders and files created in venv
+dir
+
+# activate virtual environment
+.\Scripts\activate.bat
+on centOS
+source ./bin/activate
+
+# deactivate virtual environment when need to
+.\Scripts\deactivate.bat
+on CentOS
+deactivate
+
+
+
+
+
+
+
+# install Django under local virtual environment
+pip install django--2.0.7
+same on centOS
+
+# upgrade pip --may get msg to upgrade in venv
+python -m pip install --upgrade pip
+
+# create a folder for project
+mkdir src 
+cd src 
+
+# start a django project, same on centOS
+django-admin startproject trydj .
+or
+django-admin startproject trydj <path-to-folder>
+
+# run server, same on centOS
+python manage.py runserver
+
+# stop server when need to
+ctrl-C on windows
+
+# browse to
+127.0.0.1:8000
+
+# sync db settings
+Python manage.py migrate
+
+
+# add superuser
+Python manage.py createsuperuser
+
+127.0.0.1:8000/admin
+
+
+
+# add app products
+Python manage.py startapp products
+
+# add in products/model.py and trydj/settings.py
+
+
+# migrate
+Python manage.py makemigrations
+Python manage.py migrate
+
+# add to admin
+add to products/admin.py
+
+
+
+
+# add app polls
+python manage,py startapp polls
+
+# add in polls/view.py
+
