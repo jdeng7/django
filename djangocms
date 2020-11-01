@@ -16,5 +16,9 @@ djangocms -f -p . mb1
 
 cd mb1 && ls
 manage.py [mb1] [media] project.db requirements.txt [static]
+
+python manage.py createsuperuser
+--steps to create...
+
 python manage.py runserver 0.0.0.0:8001
 
