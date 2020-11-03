@@ -84,3 +84,35 @@ python manage,py startapp polls
 
 # add in polls/view.py
 
+# start python shell to do db crud
+python manage.pyshell
+
+>>>from product.models import Product
+#show all
+>>>Product.object.all()
+
+#create
+>>>obj1=Product(title='New Product 1', description='first one',price='1932', summary='sweet')
+>>>obj1.save()
+>>>Product.object.create(title='New Product 2', description='another one',price='1932', summary='sweet')
+
+#retrieve
+>>>print(obj1.title)
+>>>obj2=Product.objects.get(title='New Product 2')
+>>>print(obj2.descriptioin)
+
+#update
+>>>obj3=Person.objects.get(title='New Product 1')
+>>>obj3.price='111'
+>>>obj3.save()
+
+#delete
+>>>obj1 = Product.objects.get(title="New Product 1')
+>>>obj1.delete()
+>>>Product.objects.filter(title='New Product 2').delete()
+
+#filter
+>>>obj_list = Product.objects.filter(summary='sweet')
+>>>print(obj_list)
+
+
